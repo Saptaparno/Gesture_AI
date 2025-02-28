@@ -9,7 +9,7 @@ from flask import Flask, jsonify, Response
 app = Flask(__name__)
 
 # Ensure model exists
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "models", "gesture_model.tflite")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "gesture_model.tflite")
 
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"❌ Model file not found: {MODEL_PATH}")
