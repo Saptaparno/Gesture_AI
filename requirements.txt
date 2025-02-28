@@ -5,3 +5,5 @@ mediapipe
 tensorflow
 scikit-learn
 pyttsx3
+tensorflow-lite
+gunicorn
