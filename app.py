@@ -66,4 +66,8 @@ def process_frame():
 @app.route("/video_feed")
 def video_feed():
     """Video streaming route."""
-    return Response(process_frame(), mimetype="multipa
+    return Response(process_frame(), mimetype="multipart/x-mixed-replace; boundary=frame")
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Default to 5000 if PORT not set
+    app.run(host="0.0.0.0", port=port)
